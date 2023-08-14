@@ -30,7 +30,7 @@ class ProcessChat implements ShouldBroadcast
     public function broadcastOn(): array
     {
         return [
-            new PrivateChannel('channel-name'),
+            new PrivateChannel('chat'),
         ];
     }
 }
