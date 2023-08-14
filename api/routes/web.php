@@ -1,7 +1,5 @@
 <?php
 
-use Ratchet\Server\IoServer;
-use App\Http\WebSocketServer;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,13 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
-
-Route::get('/websocket', function () {
-    $server = IoServer::factory(
-        new WebSocketServer(),
-        8080 // Porta para o WebSocket
-    );
-
-    $server->run();
 });
