@@ -26,6 +26,6 @@ class ProcessChat implements ShouldQueue
      */
     public function handle(): void
     {
-        //
+        
     }
 }

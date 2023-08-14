@@ -6,8 +6,11 @@ use App\Events\PeocessChat;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class SendChattNotification
+class SendChattNotification implements ShouldQueue
 {
+
+    public $connection = 'database';
+    
     /**
      * Create the event listener.
      */
@@ -21,6 +24,7 @@ class SendChattNotification
      */
     public function handle(PeocessChat $event): void
     {
-        //
+        
     }
+
 }
