@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('message', 500)->nullable(false);
             $table->enum('status', ['sent', 'received', 'read']);
             $table->foreignId('char_id')->constrained('chat');
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }
