@@ -1,12 +1,14 @@
+import { MessageContainer, ChatMessage } from "../../Assets/Style";
+
 const Message = () => {
     return (
-        <div className="messages-container">
+        <MessageContainer className="messages-container">
             <div className="bg-image"></div>
-            <div className="chat-messages">
+            <ChatMessage className="chat-messages">
                 <p className="guest-message">Olá, bom dia</p>
                 <p className="user-message">Oi, tudo bem?</p>
-            </div>
-        </div>
+            </ChatMessage>
+        </MessageContainer>
     );
 }
 

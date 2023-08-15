@@ -1,10 +1,13 @@
+import { SendMessageContainer } from "../../Assets/Style";
+import { FaGrin, FaMicrophone } from "react-icons/fa";
+
 const SendMessage = () => {
     return(
-        <div className="sendmessage-container">
-            <i className="far fa-grin"></i>
+        <SendMessageContainer className="sendmessage-container">
+            <FaGrin />
             <input id="chatmessage" type="text" name="message" className="userinput" placeholder="Digite uma mensagem" />
-            <i className="fas fa-microphone"></i>
-        </div>
+            <FaMicrophone id="microphone"/>
+        </SendMessageContainer>
     );
 }
 

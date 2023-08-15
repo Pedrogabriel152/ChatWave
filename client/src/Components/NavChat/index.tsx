@@ -1,16 +1,20 @@
+import { ChatNavBar, ContactInfo, UserPhoto, ChatTools } from "../../Assets/Style";
+import Logo from "../../Assets/img/user.jpeg";
+import { FaSearch, FaPaperclip, FaEllipsisV } from "react-icons/fa";
+
 const NavChat = () => {
     return(
-        <nav className="chat-navbar">
-            <div className="contactinfo-container">
-                <img className="user-photo" src="img/avatar2.png" />
+        <ChatNavBar className="chat-navbar">
+            <ContactInfo className="contactinfo-container">
+                <UserPhoto src={Logo} />
                 <p className="user-name">Sabrina Matos</p>
-            </div>
-            <ul className="chattools-container">
-                <li><i className="fas fa-search"></i></li>
-                <li><i className="fas fa-paperclip"></i></li>
-                <li><i className="fas fa-ellipsis-v"></i></li>
-            </ul>
-        </nav>
+            </ContactInfo>
+            <ChatTools className="chattools-container">
+                <li><FaSearch /></li>
+                <li><FaPaperclip /></li>
+                <li><FaEllipsisV /></li>
+            </ChatTools>
+        </ChatNavBar>
     );
 }
 
