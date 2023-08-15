@@ -19,13 +19,13 @@ const Home = () => {
          // Exemplo de canal e evento para ouvir
         const channel = echo.channel('chat.1.1');
         const eventListener = (data: any) => {
-        console.log('Received event:', data);
+            console.log('Received event:', data);
         };
         channel.listen('chat.1.1', eventListener);
 
         return () => {
         // Desinscreva-se do evento ao desmontar o componente
-        channel.stopListening('chat.1.1', eventListener);
+            channel.stopListening('chat.1.1', eventListener);
         };
       }, []);
 
