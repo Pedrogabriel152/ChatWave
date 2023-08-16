@@ -34,7 +34,7 @@ class ProcessChat implements ShouldBroadcast
     public function broadcastOn(): array
     {
         return [
-            new PrivateChannel('chat.'.$this->myUser->id.".".$this->destinyUser->id),
+            new Channel('chat.'.$this->myUser->id.".".$this->destinyUser->id),
         ];
     }
 }
